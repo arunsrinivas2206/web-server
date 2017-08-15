@@ -1,0 +1,18 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "4.15.4",
+    "hbs": "4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Arun Srinivas <arunsrinivas.venkatesh@yahoo.com> (http://cuckoopost.com/)",
+  "license": "MIT",
+  "description": ""
+}
