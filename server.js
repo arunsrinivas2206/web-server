@@ -28,9 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware
 app.use((req, res, next) => {
 	console.log(`${new Date()}: ${req.url} - ${req.method}`);
-	fs.appendFile('logs.txt', `${new Date()}: ${req.url} - ${req.method}\n`, (err) => {
-		return console.log(err);
-	});
+	fs.appendFile('logs.txt', `${new Date()}: ${req.url} - ${req.method}\n`);
 	next();
 });
 
@@ -41,6 +39,10 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
 	res.render('about.hbs', {title: 'About', name: 'Arun', pageTitle: 'About'});
+});
+
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {title: 'Projects', name: 'Arun', pageTitle: 'Projects'});
 });
 
 app.get('/bad', (req, res) => {
